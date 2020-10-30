@@ -10,6 +10,11 @@
             "StackName": "amplify-driveway-production-221807",
             "StackId": "arn:aws:cloudformation:us-east-1:349544658243:stack/amplify-driveway-production-221807/90b59c10-1aa1-11eb-9b35-0e55cf8eb989",
             "AmplifyAppId": "d1r0vgdcpqcux4"
+        },
+        "categories": {
+            "auth": {
+                "driveway37b231ef": {}
+            }
         }
     }
 }
