@@ -1,7 +1,7 @@
 const { CognitoIdentityServiceProvider } = require('aws-sdk');
 const cognitoIdentityServiceProvider = new CognitoIdentityServiceProvider();
 
-const USER_POOL_ID = 'us-east-1_FLD9PkYD3';
+const USER_POOL_ID = process.env.REACT_APP_USER_POOL_ID;
 
 const stripe = require('stripe')(process.env.REACT_APP_STRIPE_PRIVATE_KEY);
 
