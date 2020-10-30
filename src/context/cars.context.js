@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { API, graphQLOperation } from 'aws-amplify';
 import { v4 as uuidv4 } from 'uuid';
 import { listCars } from '../api/queries';
-import { processOrder } from '../api/mutations';
+import { drivewayProcessOrder } from '../api/mutations';
 
 const CarContext = React.createContext();
 
@@ -22,7 +22,7 @@ const CarProvider = ({children}) => {
         };
 
         try {
-            await API.graphql(graphqlOperation(processOrder, { input: payload }));
+            await API.graphql(graphqlOperation(drivewayProcessOrder, { input: payload }));
             console.log('Order is successful');
         } catch (err) {
             console.log(err);
