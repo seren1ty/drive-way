@@ -1,20 +1,15 @@
 {
-    "prod": {
+    "production": {
         "awscloudformation": {
-            "AuthRoleName": "amplify-driveway-prod-204926-authRole",
-            "UnauthRoleArn": "arn:aws:iam::349544658243:role/amplify-driveway-prod-204926-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::349544658243:role/amplify-driveway-prod-204926-authRole",
+            "AuthRoleName": "amplify-driveway-production-221807-authRole",
+            "UnauthRoleArn": "arn:aws:iam::349544658243:role/amplify-driveway-production-221807-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::349544658243:role/amplify-driveway-production-221807-authRole",
             "Region": "us-east-1",
-            "DeploymentBucketName": "amplify-driveway-prod-204926-deployment",
-            "UnauthRoleName": "amplify-driveway-prod-204926-unauthRole",
-            "StackName": "amplify-driveway-prod-204926",
-            "StackId": "arn:aws:cloudformation:us-east-1:349544658243:stack/amplify-driveway-prod-204926/03a04530-19cc-11eb-a487-125caf34a739",
-            "AmplifyAppId": "d3p0azndac13rv"
-        },
-        "categories": {
-            "auth": {
-                "drivewayc1565711": {}
-            }
+            "DeploymentBucketName": "amplify-driveway-production-221807-deployment",
+            "UnauthRoleName": "amplify-driveway-production-221807-unauthRole",
+            "StackName": "amplify-driveway-production-221807",
+            "StackId": "arn:aws:cloudformation:us-east-1:349544658243:stack/amplify-driveway-production-221807/90b59c10-1aa1-11eb-9b35-0e55cf8eb989",
+            "AmplifyAppId": "d1r0vgdcpqcux4"
         }
     }
 }
