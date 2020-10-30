@@ -1,0 +1,86 @@
+type Car
+  @model(subscriptions: null)
+  @auth(
+    rules: [
+      # allow admins to create, update and delete cars
+      { allow: groups, groups: ["Admin"] }
+      # allow all authenticated users to view cars
+      { allow: private, operations: [read] }
+      # allow all guest users (not authenticated) to view cars
+      { allow: public, operations: [read] }
+    ]
+  ) {
+  id: ID!
+  make: String!
+  model: String!
+  description: String
+  image: String
+  author: String
+  featured: Boolean
+  price: Float
+  orders: [CarOrder] @connection(keyName: "byCar", fields: ["id"])
+}
+
+type CarOrder
+  @model(queries: null, subscriptions: null)
+  @key(name: "byCar", fields: ["car_id", "order_id"])
+  @key(name: "byOrder", fields: ["order_id", "car_id"])
+  @auth(
+    rules: [
+      # allow admins to create car orders for customers by using customer email in lambda
+      { allow: owner, identityClaim: "email", ownerField: "customer" }
+      { allow: groups, groups: ["Admin"] }
+    ]
+  ) {
+  id: ID!
+  car_id: ID!
+  order_id: ID!
+  car: Car @connection(fields: ["car_id"])
+  order: Order @connection(fields: ["order_id"])
+}
+
+type Order
+  @model(subscriptions: null)
+  @auth(
+    rules: [
+      # only owner can see his orders
+      { allow: owner, identityClaim: "email", ownerField: "customer" }
+      # allow admins to view orders
+      { allow: groups, groups: ["Admin"] }
+    ]
+  )
+  @key(name: "byUser", fields: ["user"]) {
+  id: ID!
+  user: String!
+  date: String
+  total: Float
+  cars: [CarOrder] @connection(keyName: "byOrder", fields: ["id"])
+}
+
+enum OrderStatus {
+  SUCCESS
+  FAILED
+}
+
+input CartItem {
+  id: ID!
+  make: String
+  model: String
+  image: String
+  price: Float
+  amount: Int
+}
+
+input ProcessOrderInput {
+  id: ID!
+  cart: [CartItem]
+  total: Float!
+  token: String!
+  address: String
+}
+
+type Mutation {
+  processOrder(input: ProcessOrderInput!): OrderStatus
+    @function(name: "processPayment-${env}")
+    @function(name: "createOrder-${env}")
+}
