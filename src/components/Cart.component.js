@@ -31,6 +31,7 @@ const Cart = () => {
                             <button onClick={() => increaseAmount(item.id)}>
                                 <FiChevronUp />
                             </button>
+                            <p>{item.amount}</p>
                             <button onClick={() => decreaseAmount(item.id, item.amount)}>
                                 <FiChevronDown />
                             </button>

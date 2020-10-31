@@ -33,12 +33,12 @@ const App = () => {
                 <Route path='/checkout'>
                     <Checkout />
                 </Route>
-                <Route path='/cars'>
+                <Route exact path='/cars'>
                     <Cars />
                 </Route>
-                <Route path='/cars/:id' children={<CarDetails></CarDetails>}>
+                <Route path="/cars/:id" children={<CarDetails></CarDetails>}>
                 </Route>
-                <Route exact path='/admin'>
+                <Route path='/admin'>
                     <Admin />
                 </Route>
                 <Route path='*'>

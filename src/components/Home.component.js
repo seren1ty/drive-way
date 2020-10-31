@@ -13,7 +13,7 @@ const Home = () => {
 
     return (
         <>
-            <Banner></Banner>
+            <Banner />
             <section>
                 <header>
                     <h3>Featured Vehicles</h3>
@@ -25,7 +25,7 @@ const Home = () => {
                             <div>
                                 <img src={car.image} alt={car.make + ' ' + car.model} />
                             </div>
-                            <Link to={`cars/${car.id}`} className="btn">Details</Link>
+                            <Link to={`/cars/${car.id}`} className="btn">Details</Link>
                         </article>
                     ))
                 }

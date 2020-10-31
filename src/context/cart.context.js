@@ -43,7 +43,7 @@ const CartProvider = ({ children }) => {
         if (cartItem) {
             increaseAmount(id);
         } else {
-            const cartItems = [...cart, { id, make, model, price, image }];
+            const cartItems = [...cart, { id, make, model, price, image, amount: 1 }];
             setCart(cartItems);
         }
     };

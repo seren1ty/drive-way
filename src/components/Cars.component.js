@@ -17,7 +17,7 @@ const Cars = () => {
                     <div>
                         <img src={image} alt={make + ' ' + model} />
                     </div>
-                    <Link to={`cars/${id}`} className="btn">Details</Link>
+                    <Link to={`/cars/${id}`} className="btn">Details</Link>
                 </article>
             ))
         }
