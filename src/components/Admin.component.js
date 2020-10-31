@@ -35,7 +35,7 @@ const Admin = () => {
         const file = e.target.files[0];
         const name = file.name.split('.')[0];
         const extension = file.name.split('.')[1];
-        const key = `images/${uuidv4}${name}.${extension}`;
+        const key = `images/${uuidv4()}${name}.${extension}`;
         const url = `https://${bucket}.s3.${region}.amazonaws.com/public/${key}`;
 
         try {
