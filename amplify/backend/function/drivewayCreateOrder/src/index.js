@@ -3,9 +3,9 @@ const AWS = require('aws-sdk');
 
 const documentClient = new AWS.DynamoDB.DocumentClient();
 
-const ORDER_TABLE = '<order_table_name>';
+const ORDER_TABLE = 'Order-6cdkfasg3zgpvkvkz5gjbd2rka-production';
 const ORDER_TYPE = 'Order';
-const CAR_ORDER_TABLE = '<car_order_table_name>';
+const CAR_ORDER_TABLE = 'CarOrder-6cdkfasg3zgpvkvkz5gjbd2rka-production';
 const CAR_ORDER_TYPE = 'CarOrder';
 
 const createOrder = async (payload) => {

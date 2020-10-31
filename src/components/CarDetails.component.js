@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
-import { CarContext } from '../context/cars';
-import { CartContext } from '../context/cart';
+import { CarContext } from '../context/cars.context';
+import { CartContext } from '../context/cart.context';
 
 const CarDetails = () => {
     const { id } = useParams();
@@ -17,7 +17,7 @@ const CarDetails = () => {
         return <h3>Loading ...</h3>;
     }
 
-    const { url, make, model, description, price, image: url } = car;
+    const { make, model, description, price, image: url } = car;
 
     return (
         <section>
@@ -25,9 +25,9 @@ const CarDetails = () => {
                 <img src={url} alt="" />
             </div>
             <div>
-                <h2>{title}</h2>
+                <h2>{model}</h2>
                 <p>{description}</p>
-                <h3>{author}</h3>
+                <h3>{make}</h3>
                 <h4>Price - ${price}</h4>
                 <button className="btn"
                     onClick={() => {

@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useContext, createElement } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
-import { CarContext } from '../../context/cars';
-import { CartContext } from '../../context/cart';
+import { CarContext } from '../../context/cars.context';
+import { CartContext } from '../../context/cart.context';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 
 const CARD_ELEMENT_OPTIONS = {
@@ -24,7 +24,7 @@ const CARD_ELEMENT_OPTIONS = {
 
 const CheckoutForm = () => {
     const { cart, total, clearCart } = useContext(CartContext);
-    const { checkout } = useContext(CartContext);
+    const { checkout } = useContext(CarContext);
     const [orderDetails, setOrderDetails] = useState({ cart, total, address: null, token: null });
     const [error, setError] = useState(null);
     const stripe = useStripe();
@@ -37,6 +37,7 @@ const CheckoutForm = () => {
             clearCart();
             history.push('/');
         }
+    // eslint-disable-next-line
     }, [orderDetails]);
 
     // Handle real-time validation errors from the card element.

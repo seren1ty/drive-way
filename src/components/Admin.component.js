@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {v4 as uuidv4 } from 'uuid';
 import { API, graphqlOperation, Storage } from 'aws-amplify';
-import { AmplifyAuthenticator, AmplifySignout } from '@aws-amplify/ui-react';
+import { AmplifyAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 import { createCar } from '../api/mutations'
 import config from '../aws-exports';
 
@@ -60,7 +60,7 @@ const Admin = () => {
                 <section>
                     <header>
                         <h3>Add New Car</h3>
-                        <AmplifySignout></AmplifySignout>
+                        <AmplifySignOut></AmplifySignOut>
                     </header>
                     <form onSubmit={handleSubmit}>
                         <div className="form-image">

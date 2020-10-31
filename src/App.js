@@ -1,25 +1,52 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import Amplify from 'aws-amplify';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Home from './components/Home.component';
+import Error from './components/Error.component';
+import Cars from './components/Cars.component';
+import Cart from './components/Cart.component';
+import Checkout from './components/Checkout.component';
+import CarDetails from './components/CarDetails.component';
+import Admin from './components/Admin.component';
+
+import Header from './components/common/Header.component';
+
+import awsExports from './aws-exports';
+
+Amplify.configure(awsExports);
+
+const App = () => {
+    return (
+        <Router>
+            <Header />
+            <Switch>
+                <Route exact path='/'>
+                    <Home />
+                </Route>
+                <Route path='/cart'>
+                    <Cart />
+                </Route>
+                <Route path='/checkout'>
+                    <Checkout />
+                </Route>
+                <Route path='/cars'>
+                    <Cars />
+                </Route>
+                <Route path='/cars/:id' children={<CarDetails></CarDetails>}>
+                </Route>
+                <Route exact path='/admin'>
+                    <Admin />
+                </Route>
+                <Route path='*'>
+                    <Error />
+                </Route>
+            </Switch>
+        </Router>
+    );
 }
 
 export default App;

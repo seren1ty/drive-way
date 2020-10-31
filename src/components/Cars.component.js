@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { CarContext } from '../context/cars';
+import { CarContext } from '../context/cars.context';
 
 const Cars = () => {
     const { cars } = useContext(CarContext);
@@ -12,7 +12,7 @@ const Cars = () => {
     return (
         <section>
         {
-            cars.map(({ image: image, id, make, model }) => (
+            cars.map(({ image, id, make, model }) => (
                 <article key={id}>
                     <div>
                         <img src={image} alt={make + ' ' + model} />

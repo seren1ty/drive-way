@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import Banner from './common/Banner';
+import Banner from './common/Banner.component';
 
-import { CarContext } from '../context/cars';
+import { CarContext } from '../context/cars.context';
 
 const Home = () => {
     const { featured } = useContext(CarContext);

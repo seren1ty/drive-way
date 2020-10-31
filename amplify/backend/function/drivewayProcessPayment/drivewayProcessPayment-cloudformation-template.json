@@ -69,7 +69,7 @@
 				"Timeout": "25",
 				"Code": {
 					"S3Bucket": "amplify-driveway-production-221807-deployment",
-					"S3Key": "amplify-builds/drivewayProcessPayment-666f424b45415355586d-build.zip"
+					"S3Key": "amplify-builds/drivewayProcessPayment-526376516a5733397951-build.zip"
 				}
 			}
 		},
