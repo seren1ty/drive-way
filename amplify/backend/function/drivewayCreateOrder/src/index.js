@@ -66,7 +66,7 @@ const createCarOrder = async (payload) => {
 // 4. Email the invoice (TODO)
 exports.handler = async (event) => {
     try {
-        let payload = event.prev.results;
+        let payload = event.prev.result;
         payload.order_id = uuidv4();
 
         // Create a new order
