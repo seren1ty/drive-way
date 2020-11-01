@@ -18,7 +18,7 @@ const Cars = () => {
                 <article key={id}>
                     <div>
                         <img src={image} alt={make + ' ' + model}
-                          onClick={(e) => history.push(`/cars/${id}`)} />
+                          onClick={() => history.push(`/cars/${id}`)} />
                     </div>
                     <Link to={`/cars/${id}`} className="btn">Details</Link>
                 </article>

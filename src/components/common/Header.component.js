@@ -3,25 +3,27 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <header>
+        <div className="navbar">
+            <div>
+                <span className="logo-text">DRIVE WAY</span>
+            </div>
             <nav>
-                <h1 id="logo">Drive Way</h1>
-                <ul>
-                    <li>
+                <ul className="">
+                    <li className="">
                         <Link to="/">Home</Link>
                     </li>
-                    <li>
+                    <li className="">
                         <Link to="/cars">Cars</Link>
                     </li>
-                    <li>
+                    <li className="">
                         <Link to="/cart">Cart</Link>
                     </li>
-                    <li>
+                    <li className="">
                         <Link to="/checkout">Checkout</Link>
                     </li>
                 </ul>
             </nav>
-        </header>
+        </div>
     )
 };
 

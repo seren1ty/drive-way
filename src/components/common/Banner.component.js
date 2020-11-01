@@ -1,13 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import image from '../../assets/Driveway_Header.jpg';
+
 const Banner = () => {
     return (
-        <section>
-            <h2>Drive Way</h2>
-            <h3>Next stop is yours!</h3>
-            <Link to="/cars" className="btn">View All Cars</Link>
-        </section>
+        <div className="row banner">
+            <div className="col-2">
+                <h1>The next stop<br/>is your place!</h1>
+                <Link to="/cars" className="btn">Explore Cars &#8594;</Link>
+            </div>
+            <div className="col-2">
+                <img src={image} />
+            </div>
+        </div>
     )
 };
 
