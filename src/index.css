@@ -61,19 +61,18 @@ nav ul li {
 
 /* Banner */
 
-.row {
+.row-flex {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.row.banner {
+.row-flex.banner {
   background: radial-gradient(rgb(255, 255, 255), #b9b9b9);
 }
 
 .col-2 {
-  flex-basis: 40% 60%;
   min-width: 385px;
 }
 
@@ -231,7 +230,6 @@ h4 {
 
 .car-item {
   padding: 0 0 50px 0;
-  /* transition: transform 2.5s; */
 }
 
 .car-item:hover {
@@ -241,4 +239,62 @@ h4 {
 .car-item img {
   width: 280px;
   height: 165px;
+}
+
+/* Car Detail */
+
+.row-detail {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-2-detail {
+  padding: 0 20px;
+  min-width: 300px;
+}
+
+.col-image {
+  flex: 60%;
+}
+
+.col-detail {
+  flex: 40%;
+}
+
+.col-image img {
+  max-width: 100%;
+  padding: 0;
+}
+
+.col-2-detail h2 {
+  font-size: 30px;
+  line-height: 60px;
+  margin: 0px;
+}
+
+.col-2-detail p {
+  min-height: 145px;
+  margin: 20px 0;
+}
+
+.col-2-detail h4 {
+  font-size: 30px;
+  margin: 10px 0;
+}
+
+.row-finer-detail {
+  display: flex;
+}
+
+.col-make-rating {
+  flex: 70%;
+}
+
+.col-price {
+  flex: 30%;
+}
+
+.col-2-detail .checkout {
+  width: 100%;
+  text-align: center;
 }

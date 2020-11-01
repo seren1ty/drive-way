@@ -20,24 +20,40 @@ const CarDetails = () => {
     const { make, model, description, price, image: url } = car;
 
     return (
-        <section>
-            <div>
-                <img src={url} alt="" />
-            </div>
-            <div>
-                <h2>{model}</h2>
-                <p>{description}</p>
-                <h3>{make}</h3>
-                <h4>Price - ${price}</h4>
-                <button className="btn"
-                    onClick={() => {
-                        addToCart({ ...car, id });
-                        history.push('/cart');
-                    }}>
-                    Add to Cart
-                </button>
-            </div>
-        </section>
+        <div className="row-detail">
+                <div className="col-2-detail col-image">
+                    <img src={url} alt={make + ' ' + model} />
+                </div>
+                <div className="col-2-detail col-detail">
+                    <h2>{model}</h2>
+                    <p>{description}</p>
+                    <div className="row-finer-detail">
+                        <div className="col-make-rating">
+                            <h3>{make}</h3>
+                            <div className="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                            </div>
+                        </div>
+                        <div className="col-price">
+                            <h4>${price}</h4>
+                        </div>
+                    </div>
+                    <div className="checkout">
+                        {/* eslint-disable-next-line */}
+                        <a className="btn" href="#"
+                            onClick={() => {
+                                addToCart({ ...car, id });
+                                history.push('/cart');
+                            }}>
+                            Add to Cart
+                        </a>
+                    </div>
+                </div>
+        </div>
     );
 };
 

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import Banner from './common/Banner.component';
 
 import { CarContext } from '../context/cars.context';
@@ -20,7 +20,7 @@ const Home = () => {
             <div className="featured">
                 <div className="small-container">
                     <h2 className="title">Featured Vehicles</h2>
-                    <div class="row">
+                    <div class="row-flex">
                     {
                         featured.map((car) => (
                             <div className="col-3" key={car.id}
@@ -45,7 +45,7 @@ const Home = () => {
             <div className="testimonial">
                 <div className="small-container">
                     <h2 className="title">Testomonials</h2>
-                    <div className="row">
+                    <div className="row-flex">
                         <div className="col-4">
                             <i className="fa fa-quote-left"></i>
                             <p>

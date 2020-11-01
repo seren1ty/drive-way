@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { CarContext } from '../context/cars.context';
 import Masonry from 'react-masonry-component';
 import masonryConfig from '../masonryConfig';
@@ -23,9 +23,8 @@ const Cars = () => {
             >
             {
                 cars.map(({ id, image, make, model, price }) => (
-                    <div className="car-item" key={id}>
-                        <img src={image} alt={make + ' ' + model}
-                            onClick={() => history.push(`/cars/${id}`)} />
+                    <div className="car-item" key={id} onClick={() => history.push(`/cars/${id}`)}>
+                        <img src={image} alt={make + ' ' + model} />
                         <h4>{make + ' ' + model}</h4>
                         <div className="rating">
                             <i class="fa fa-star"></i>
