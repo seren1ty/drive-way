@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { CarContext } from '../context/cars.context';
+import Masonry from 'react-masonry-component';
+import masonryConfig from '../masonryConfig';
 
 const Cars = () => {
     const { cars } = useContext(CarContext);
@@ -12,19 +14,32 @@ const Cars = () => {
     }
 
     return (
-        <section>
-        {
-            cars.map(({ image, id, make, model }) => (
-                <article key={id}>
-                    <div>
+        <div className="container">
+            <Masonry className={"grid"}
+            elementType={"div"}
+            updateOnEachImageLoad={false}
+            disableImagesLoaded={false}
+            options={masonryConfig}
+            >
+            {
+                cars.map(({ id, image, make, model, price }) => (
+                    <div className="car-item" key={id}>
                         <img src={image} alt={make + ' ' + model}
-                          onClick={() => history.push(`/cars/${id}`)} />
+                            onClick={() => history.push(`/cars/${id}`)} />
+                        <h4>{make + ' ' + model}</h4>
+                        <div className="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <p>${price}</p>
                     </div>
-                    <Link to={`/cars/${id}`} className="btn">Details</Link>
-                </article>
-            ))
-        }
-        </section>
+                ))
+            }
+            </Masonry>
+        </div>
     );
 };
 

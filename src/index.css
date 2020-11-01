@@ -73,8 +73,12 @@ nav ul li {
 }
 
 .col-2 {
-  flex-basis: 50%;
+  flex-basis: 40% 60%;
   min-width: 385px;
+}
+
+.col-2-a {
+  text-align: center;
 }
 
 .col-2 img {
@@ -100,6 +104,16 @@ nav ul li {
 
 .btn:hover {
   background: #563434;
+}
+
+@media screen and (max-width: 765px) {
+  .col-2 {
+    flex-basis: 50%;
+  }
+
+  .col-2 h1 {
+    font-size: 35px;
+  }
 }
 
 /* Featured */
@@ -160,7 +174,7 @@ h4 {
 }
 
 .featured .col-3:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
 }
 
 /* Testimonial */
@@ -211,4 +225,20 @@ h4 {
 
 .footer {
   padding: 20px 0;
+}
+
+/* Cars List */
+
+.car-item {
+  padding: 0 0 50px 0;
+  /* transition: transform 2.5s; */
+}
+
+.car-item:hover {
+  transform: translateY(-5px);
+}
+
+.car-item img {
+  width: 280px;
+  height: 165px;
 }
