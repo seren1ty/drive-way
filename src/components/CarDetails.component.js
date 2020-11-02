@@ -31,11 +31,11 @@ const CarDetails = () => {
                         <div className="col-make-rating">
                             <h3>{make}</h3>
                             <div className="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-half-o"></i>
+                                <i className="fa fa-star"></i>
+                                <i className="fa fa-star"></i>
+                                <i className="fa fa-star"></i>
+                                <i className="fa fa-star"></i>
+                                <i className="fa fa-star-half-o"></i>
                             </div>
                         </div>
                         <div className="col-price">

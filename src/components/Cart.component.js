@@ -15,18 +15,25 @@ const Cart = () => {
     }, [total]);
 
     if (!cart.length) {
-        return <h3>Empty Cart</h3>
+        return (
+            <div className="cart-page">
+                <div className="empty">
+                    <h3>Sorry, it looks like your Cart is empty.</h3>
+                </div>
+            </div>
+        );
     }
 
     return (
         <div className="cart-page">
             <table>
+            <tbody>
                 <tr>
                     <th>Product</th>
                     <th className="cart-quantity">Quantity</th>
                     <th>Subtotal</th>
-                </tr>{/*
-                <tr>
+                </tr>
+                {/* <tr>
                     <td>
                         <div className="cart-info">
                             <img src="https://driveway67fcb2f8f0154c07921a50a5f48b68bc221807-production.s3.us-east-1.amazonaws.com/public/images/f4af98fb-59d8-4b0e-bdfa-d945d2714c91McLaren_P1_GTR.JPG" alt="cart item"/>
@@ -72,10 +79,12 @@ const Cart = () => {
                     </tr>
                 ))
             }
+            </tbody>
             </table>
 
             <div className="total-price">
                 <table>
+                <tbody>
                     <tr>
                         <td>Subtotal</td>
                         <td>${total}</td>
@@ -88,6 +97,7 @@ const Cart = () => {
                         <td><strong>Total</strong></td>
                         <td><strong>${total + tax}</strong></td>
                     </tr>
+                </tbody>
                 </table>
             </div>
             <div className="cart-checkout">

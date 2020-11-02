@@ -20,7 +20,7 @@ const Home = () => {
             <div className="featured">
                 <div className="small-container">
                     <h2 className="title">Featured Vehicles</h2>
-                    <div class="row-flex">
+                    <div className="row-flex">
                     {
                         featured.map((car) => (
                             <div className="col-3" key={car.id}
@@ -28,11 +28,11 @@ const Home = () => {
                                 <img src={car.image} alt={car.make + ' ' + car.model} />
                                 <h4>{car.make + ' ' + car.model}</h4>
                                 <div className="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-o"></i>
+                                    <i className="fa fa-star"></i>
+                                    <i className="fa fa-star"></i>
+                                    <i className="fa fa-star"></i>
+                                    <i className="fa fa-star"></i>
+                                    <i className="fa fa-star-o"></i>
                                 </div>
                                 <p>${car.price}</p>
                             </div>
@@ -54,11 +54,11 @@ const Home = () => {
                                 online car buying scheme. Highly Recommended!
                             </p>
                             <div className="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
+                                <i className="fa fa-star"></i>
+                                <i className="fa fa-star"></i>
+                                <i className="fa fa-star"></i>
+                                <i className="fa fa-star"></i>
+                                <i className="fa fa-star"></i>
                             </div>
                             <h3 className="name">Frank Williams</h3>
                         </div>
@@ -70,11 +70,11 @@ const Home = () => {
                                 the personal drop off experience, awesome!
                             </p>
                             <div className="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
+                                <i className="fa fa-star"></i>
+                                <i className="fa fa-star"></i>
+                                <i className="fa fa-star"></i>
+                                <i className="fa fa-star"></i>
+                                <i className="fa fa-star-o"></i>
                             </div>
                             <h3 className="name">Jim Matthews</h3>
                         </div>
@@ -86,11 +86,11 @@ const Home = () => {
                                 they were a picture of perfection. Great stuff.
                             </p>
                             <div className="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-half-o"></i>
+                                <i className="fa fa-star"></i>
+                                <i className="fa fa-star"></i>
+                                <i className="fa fa-star"></i>
+                                <i className="fa fa-star"></i>
+                                <i className="fa fa-star-half-o"></i>
                             </div>
                             <h3 className="name">Francis Gibbins</h3>
                         </div>
@@ -102,11 +102,11 @@ const Home = () => {
                                 personal collection. Wonderful service!
                             </p>
                             <div className="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
+                                <i className="fa fa-star"></i>
+                                <i className="fa fa-star"></i>
+                                <i className="fa fa-star"></i>
+                                <i className="fa fa-star"></i>
+                                <i className="fa fa-star"></i>
                             </div>
                             <h3 className="name">John Styles</h3>
                         </div>

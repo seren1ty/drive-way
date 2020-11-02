@@ -27,11 +27,11 @@ const Cars = () => {
                         <img src={image} alt={make + ' ' + model} />
                         <h4>{make + ' ' + model}</h4>
                         <div className="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-half-o"></i>
+                            <i className="fa fa-star"></i>
+                            <i className="fa fa-star"></i>
+                            <i className="fa fa-star"></i>
+                            <i className="fa fa-star"></i>
+                            <i className="fa fa-star-half-o"></i>
                         </div>
                         <p>${price}</p>
                     </div>

@@ -295,6 +295,10 @@ h4 {
   margin: 10px auto;
 }
 
+.cart-page .empty {
+  margin: 30px 20px;
+}
+
 .cart-page table {
   width: 100%;
   border-collapse: collapse;
