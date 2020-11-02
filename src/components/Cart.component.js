@@ -14,9 +14,9 @@ const Cart = () => {
         setTax(total * 0.1);
     }, [total]);
 
-    /* if (!cart.length) {
+    if (!cart.length) {
         return <h3>Empty Cart</h3>
-    } */
+    }
 
     return (
         <div className="cart-page">
@@ -25,7 +25,7 @@ const Cart = () => {
                     <th>Product</th>
                     <th className="cart-quantity">Quantity</th>
                     <th>Subtotal</th>
-                </tr>
+                </tr>{/*
                 <tr>
                     <td>
                         <div className="cart-info">
@@ -42,7 +42,7 @@ const Cart = () => {
                         </div>
                     </td>
                     <td>$65000</td>
-                </tr>
+                </tr> */}
             {
                 cart.map(item => (
                     <tr key={item.id}>
