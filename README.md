@@ -3,7 +3,26 @@ Online Car Shop - The next stop is your place! [ReactJS, GraphQL, Stripe, AWS Am
 
 ***
 
-It is a mock web site that allows the user to browse and purchase Supercars to add to their own driveway.
+## How to Initialise / Run Project
+
+In the project directory, you can run:
+
+### `npm i`
+
+Loads all dependencies into the project directory, based on configuration in the package.json.<br />
+After this operation is run the project can then be started and/or tested.
+
+### `npm start`
+
+Runs the app in development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
+
+***
+
+Driveway is a mock web site that allows the user to browse and purchase Supercars to add to their own driveway.
 
 ![Driveway - Home Screen 1 - Screenshot](https://seren1ty-github-images.s3-ap-southeast-2.amazonaws.com/drive-way/drive-way_1_small.png)
 
