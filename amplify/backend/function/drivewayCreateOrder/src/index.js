@@ -32,8 +32,7 @@ const createOrder = async (payload) => {
 const createCarOrder = async (payload) => {
     let carOrders = [];
 
-    for (let i = 0; i < payload.cart.length; i++) {
-        const cartItem = payload.cart[i];
+    for (const cartItem of payload.cart) {
         carOrders.push({
             PutRequest: {
                 Item: {
