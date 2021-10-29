@@ -24,23 +24,23 @@ You will also see any lint errors in the console.
 
 Driveway is a mock web site that allows the user to browse and purchase Supercars to add to their own driveway.
 
-![Driveway - Home Screen 1 - Screenshot](https://seren1ty-github-images.s3-ap-southeast-2.amazonaws.com/drive-way/drive-way_1_small.png)
+![Driveway - Home Screen 1 - Screenshot](./public/drive-way_1_small.png)
 
-![Driveway - Home Screen 2 - Screenshot](https://seren1ty-github-images.s3-ap-southeast-2.amazonaws.com/drive-way/drive-way_2_small.png)
+![Driveway - Home Screen 2 - Screenshot](./public/drive-way_2_small.png)
 
 
 ***
 
 It is responsive for mobile, along with different browser sizes.
 
-![Driveway - Car List - Screenshot](https://seren1ty-github-images.s3-ap-southeast-2.amazonaws.com/drive-way/drive-way_3_small.png)
+![Driveway - Car List - Screenshot](./public/drive-way_3_small.png)
 
 
 ***
 
 It is allows viewing further details on each vehicle, before adding any of them to your Cart. Once the user has registered, they can then also complete the purchase using a credit card via Stripe.
 
-![Driveway - Cart - Screenshot](https://seren1ty-github-images.s3-ap-southeast-2.amazonaws.com/drive-way/drive-way_4_small.png)
+![Driveway - Cart - Screenshot](./public/drive-way_4_small.png)
 
 
 ***
